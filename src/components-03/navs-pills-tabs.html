@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Components - Navs, Pills e Tabs</title>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+     
+      <!-- <nav class="nav nav-tabs">
+        <a href="#tab-1" class="nav-link active" data-toggle="tab">Home</a>
+        <a href="#tab-2" class="nav-link" data-toggle="tab">Cursos</a>
+        <a href="#tab-3" class="nav-link" data-toggle="tab">Bootstrap</a>
+      </nav>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="tab-1">
+          <p>Conteúdo da home</p>
+        </div>
+        <div class="tab-pane" id="tab-2">
+          <p>Conteúdo de cursos</p>
+        </div>
+        <div class="tab-pane" id="tab-3">
+          <p>Conteúdo do bootstrap</p>
+        </div>
+      </div>
+
+      <hr> -->
+
+      <nav class="nav nav-pills">
+        <a href="#tab-1" class="nav-link active" data-toggle="tab">Home</a>
+        <a href="#tab-2" class="nav-link" data-toggle="tab">Cursos</a>
+        <a href="#tab-3" class="nav-link" data-toggle="tab">Bootstrap</a>
+      </nav>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="tab-1">
+          <p>Conteúdo da home</p>
+        </div>
+        <div class="tab-pane" id="tab-2">
+          <p>Conteúdo de cursos</p>
+        </div>
+        <div class="tab-pane" id="tab-3">
+          <p>Conteúdo do bootstrap</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <button class="btn btn-dark mt-2" id="btn-1">Aba Home</button>
+      <button class="btn btn-dark mt-2" id="btn-2">Aba Cursos</button>
+      <button class="btn btn-dark mt-2" id="btn-3">Aba Boottrap</button>
+
+    </div>
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <script>
+
+      $(() => {
+        
+        $('#btn-1').on('click', (e) => {
+          $('[href="#tab-1"]').tab('show')
+        })
+
+        $('#btn-2').on('click', (e) => {
+          $('[href="#tab-2"]').tab('show')
+        })
+
+        $('#btn-3').on('click', (e) => {
+          $('[href="#tab-3"]').tab('show')
+        })
+
+      })
+
+    </script>
+
+  </body>
+</html>
