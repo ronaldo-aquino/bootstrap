@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components - Progress</title>
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <br>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar"></div>
+    </div>
+
+    <br>
+    <div class="progress">
+      <div class="progress-bar w-25" role="progressbar"></div>
+    </div>
+    
+    <br>
+    <div id="progress" class="progress">
+      <div class="progress-bar" role="progressbar"></div>
+    </div>
+
+    <br>
+    <div id="progress" class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar">28%</div>
+    </div>
+
+  </div>
+
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+
+    $(() => {
+
+      window.progressInterval = setInterval(() => {
+
+        let progress = $('#progress .progress-bar').css('width')
+        .replace('%', '');
+
+        progress = parseInt(progress) + 1;
+
+        if(progress >= 100) {
+          clearInterval(progressInterval)
+        }
+
+        $('#progress .progress-bar').css('width', progress + '%');
+
+
+      }, 1000)
+
+    })
+
+  </script>
+
+</body>
+</html>

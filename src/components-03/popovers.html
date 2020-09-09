@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Components - Popovers</title>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+
+      <br>
+
+      <button 
+        type="button" 
+        class="btn btn-primary btn-lg"
+        data-toggle="popover"
+        data-content="Conteúdo do popover">
+        Mostrar Popover
+      </button>
+
+      <br><br>
+
+      <button 
+        type="button" 
+        class="btn btn-primary btn-lg"
+        data-toggle="popover"
+        data-content="Margem Líquida"
+        title="Título">
+        Mostrar Popover
+      </button>
+
+      <br><br>
+
+      <button 
+        type="button" 
+        class="btn btn-primary btn-lg"
+        data-toggle="popover"
+        data-content="Margem Líquida"
+        title="Título"
+        data-placement="left">
+        Mostrar Popover Left
+      </button>
+
+      <br><br>
+
+      <button 
+        type="button" 
+        class="btn btn-primary btn-lg"
+        data-toggle="popover"
+        data-content="Margem Líquida"
+        title="Título"
+        data-placement="right">
+        Mostrar Popover Right
+      </button>
+
+      <br><br>
+
+      <button 
+        type="button" 
+        class="btn btn-primary btn-lg"
+        data-toggle="popover"
+        data-content="Margem Líquida"
+        title="Título"
+        data-placement="top">
+        Mostrar Popover Top
+      </button>
+
+      <br><br>
+
+      <button 
+        type="button" 
+        class="btn btn-primary btn-lg"
+        data-toggle="popover"
+        data-content="Margem Líquida"
+        title="Título"
+        data-placement="bottom">
+        Mostrar Popover bottom
+      </button>
+
+      <br><br>
+
+      <button 
+        type="button" 
+        class="btn btn-primary btn-lg"
+        data-toggle="popover"
+        data-content="Margem Líquida"
+        title="Título"
+        data-trigger="focus"
+        data-placement="bottom">
+        Mostrar Popover bottom
+      </button>
+
+      <br><br>
+
+      <button 
+        type="button" 
+        class="btn btn-primary btn-lg"
+        data-toggle="popover"
+        data-content="Margem Líquida"
+        title="Título"
+        data-trigger="hover"
+        data-placement="bottom">
+        Mostrar Popover bottom
+      </button>
+
+      <br><br>
+
+      <button type="button" class="btn btn-danger" id="btn-click">
+        Abrir Popover
+      </button>
+
+    </div>
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <script>
+
+      $(() => {
+
+        $('[data-toggle="popover"]').popover();
+
+        $('#btn-click').on('click', (e) => {
+          $('[data-toggle="popover"]').popover('toggle')
+        })
+        
+      })
+
+    </script>
+
+  </body>
+</html>
