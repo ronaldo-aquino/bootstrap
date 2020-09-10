@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Components - Toastys</title>
+        <link
+            rel="stylesheet"
+            href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+        />
+    </head>
+    <body>
+        <div
+            aria-live="polit"
+            aria-atomic="true"
+            style="position: relative; min-height: 200px"
+        >
+            <div style="position: absolute; top: 0; right: 0">
+                <div class="toast m-2">
+                    <div class="toast-header bg-primary text-white">
+                        <strong class="mr-auto">Notificação</strong>
+                        <small>Agora</small>
+                        <button
+                            type="button"
+                            class="ml-2 mb-1 close"
+                            aria-hidden="true"
+                        >
+                            &times;
+                        </button>
+                    </div>
+
+                    <div class="toast-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fugit expedita asperiores fugiat delectus ipsum et
+                        quidem quaerat assumenda deleniti qui esse error, amet
+                        dolorum accusantium voluptatibus ut eos ipsam
+                        voluptates!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            $(() => {
+                $('.toast')
+                    .toast({
+                        delay: 500,
+                        autohide: false,
+                        animation: false,
+                    })
+                    .toast('show');
+            });
+        </script>
+    </body>
+</html>
